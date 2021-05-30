@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!--
+  I've been programming X months, and I have learned YY% of Intro to Webpages.
+  TODO: Fill this out ^^
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Contest: Favorite Author</title>
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+        <style>
+            body {
+                background-color: rgb(255, 235, 204);
+            }
+            
+            h1 {
+                color: rgb(69, 41, 0);
+                font-size: 65px;
+                font-family: "Dancing Script";
+                position: absolute;
+                text-align: center;
+                left: 0;
+                right: 0;
+            }
+            
+            p {
+                font-family: "Dancing Script";
+                color: rgb(69, 41, 0);
+                font-size: 36px;
+                position: absolute;
+                text-align: center;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+            
+            #quill {
+                position: absolute;
+                top: 11%;
+                left: 5%;
+                transform: scaleX(-1);
+            }
+            
+            #ink {
+                position: absolute;
+                top: 11%;
+                right: 5%;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Contest: <br>
+            Favorite <br>
+            Author
+        </h1>
+
+        <p>Deadline: November 27, 2019</p>
+        <canvas id="quill"></canvas>
+        <canvas id="ink"></canvas>
+        <script>
+            var programCode = function(processingInstance) {
+                with (processingInstance) {
+                    size(150, 250); 
+                    frameRate(30);
+        
+                    translate(-11, -15);
+                    
+                    background(255, 235, 204);
+                    //rect(0, 0, 150, 250);
+                    
+                    fill()
+                    beginShape();
+                    vertex(71, 129);
+                    vertex(97, 117);
+                    vertex(86, 117);
+                    vertex(99, 113);
+                    vertex(119, 98);
+                    vertex(108, 98);
+                    vertex(125, 91);
+                    vertex(138, 71);
+                    vertex(111, 86);
+                    vertex(87, 106);
+                    endShape(CLOSE);
+                    
+                    //noFill();
+                    beginShape();
+                    vertex(72, 126);
+                    vertex(66, 111);
+                    vertex(74, 116);
+                    vertex(70, 107);
+                    vertex(87, 87);
+                    vertex(95, 94);
+                    vertex(96, 82);
+                    vertex(139, 68);
+                    endShape();
+                    
+                    fill(0, 0, 0);
+                    beginShape();
+                    vertex(139, 69);
+                    vertex(113, 84);
+                    vertex(93, 100);
+                    vertex(83, 110);
+                    vertex(75, 119);
+                    vertex(66, 139);
+                    vertex(41, 200);
+                    vertex(34, 219);
+                    vertex(43, 206);
+                    vertex(67, 142);
+                    vertex(76, 124);
+                    vertex(87, 109);
+                    vertex(99, 99);
+                    vertex(117, 85);
+                    vertex(138, 70);
+                    endShape(CLOSE);
+                }
+            };
+
+            // Get the canvas that ProcessingJS will use
+            var canvas = document.getElementById("quill"); 
+            // Pass the function to ProcessingJS constructor
+            var processingInstance = new Processing(canvas, programCode); 
+        </script>
+        
+        <script>
+            var programCode = function(processingInstance) {
+                with (processingInstance) {
+                    /*
+                    size(150, 250); 
+                    frameRate(30);
+        
+                    translate(-16, -63);
+                    scale(1.2, 1.2);
+                    
+                    background(255, 235, 204);
+                    
+                    noFill();
+                    stroke(0, 0, 0);
+                    strokeWeight(2);
+                    
+                    arc(77, 202, 73, 23, 0, PI);
+                    line(41, 203, 41, 168);
+                    line(114, 203, 114, 168);
+                    
+                    line(41, 168, 64, 150);
+                    line(114, 168, 90, 150);
+                    
+                    noFill();
+                    line(64, 150, 64, 140);
+                    line(90, 150, 90, 140);
+                    arc(77, 140, 24, 7, 0, PI);
+                    arc(77, 140, 25, 5, PI, 2*PI);
+                    
+                    arc(77, 167, 73, 23, 0, 3);
+                    
+                    fill(0, 0, 0);
+                    textSize(20);
+                    text("I", 54, 199);
+                    text("N", 70, 201);
+                    text("K", 93, 199);
+                    */
+                    
+                    size(150, 250); 
+                    frameRate(30);
+        
+                    translate(-11, -15);
+                    
+                    background(255, 235, 204);
+                    //rect(0, 0, 150, 250);
+                    
+                    fill()
+                    beginShape();
+                    vertex(71, 129);
+                    vertex(97, 117);
+                    vertex(86, 117);
+                    vertex(99, 113);
+                    vertex(119, 98);
+                    vertex(108, 98);
+                    vertex(125, 91);
+                    vertex(138, 71);
+                    vertex(111, 86);
+                    vertex(87, 106);
+                    endShape(CLOSE);
+                    
+                    //noFill();
+                    beginShape();
+                    vertex(72, 126);
+                    vertex(66, 111);
+                    vertex(74, 116);
+                    vertex(70, 107);
+                    vertex(87, 87);
+                    vertex(95, 94);
+                    vertex(96, 82);
+                    vertex(139, 68);
+                    endShape();
+                    
+                    fill(0, 0, 0);
+                    beginShape();
+                    vertex(139, 69);
+                    vertex(113, 84);
+                    vertex(93, 100);
+                    vertex(83, 110);
+                    vertex(75, 119);
+                    vertex(66, 139);
+                    vertex(41, 200);
+                    vertex(34, 219);
+                    vertex(43, 206);
+                    vertex(67, 142);
+                    vertex(76, 124);
+                    vertex(87, 109);
+                    vertex(99, 99);
+                    vertex(117, 85);
+                    vertex(138, 70);
+                    endShape(CLOSE);
+                }
+            };
+
+            // Get the canvas that ProcessingJS will use
+            var canvas = document.getElementById("ink"); 
+            // Pass the function to ProcessingJS constructor
+            var processingInstance = new Processing(canvas, programCode); 
+        </script>
+    </body>
+</html>
