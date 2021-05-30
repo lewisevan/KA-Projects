@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<!-- 
+    This contest has already ended!
+    To view the winners, please visit this program: 
+    https://www.khanacademy.org/computer-programming/kacp-challenge-council/5745407636209664
+*/
+-->
+
+<!--
+  I've been programming X months, and I have learned YY% of Intro to Webpages.
+  TODO: Fill this out ^^
+-->
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contest: Career Paths</title>
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"> 
+    <style>
+      
+      body {
+        font-family: "Philosopher", sans-serif;
+        margin: 10px;
+        overflow: hidden;
+        box-sizing: border-box;
+        background: url('https://cdn.kastatic.org/images/marketing/growth-bg.png');
+      }
+      
+      #header {
+        text-align: center;
+      }
+      
+      #imgs {
+        text-align: center;
+      }
+      
+      .img {
+        opacity: 0.7;
+      }
+      
+      .img:hover {
+        opacity: 1;
+        transition: 0.4s ease-in;
+      }
+      
+      #img-description {
+        margin-top: 30px;
+        font-size: 30px;
+      }  
+        
+      #deadline {
+        text-align: right;
+        margin-right: 5%;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h1 id="header">What do you want to do?</h1>
+    
+    <div id="imgs">
+      <img src="https://cdn.kastatic.org/genfiles/topic-icons/icons/production_decisions.png-9e7723-128c.png" alt="economics career path image" class="img">
+      <img src="https://cdn.kastatic.org/genfiles/topic-icons/icons/algorithms.png-a4492d-128c.png" alt="programming career path image" class="img">
+      <img src="https://cdn.kastatic.org/genfiles/topic-icons/icons/chemical_reactions_stoichiometry.png-1dae0c-128c.png" alt="sciences career path image" class="img">
+      <img src="https://cdn.kastatic.org/genfiles/topic-icons/icons/polynomial_functions.png-9054bb-128c.png" alt="mathematics career path image" class="img">
+      <br>
+      <p id="img-description">&nbsp;</p>
+    </div>
+    <h2 id="deadline">Deadline: May 26th</h2>
+    
+    <script>
+      var imgDescription = document.getElementById("img-description");
+      var imgs = document.getElementsByClassName('img');
+
+      imgs[0].addEventListener('mouseover', function(){
+        imgDescription.innerHTML = 'Economics?';
+      });
+      imgs[1].addEventListener('mouseover', function(){
+        imgDescription.innerHTML = 'Programming?';
+      }); 
+      imgs[2].addEventListener('mouseover', function(){
+        imgDescription.innerHTML = 'Science?';
+      }); 
+      imgs[3].addEventListener('mouseover', function(){
+        imgDescription.innerHTML = 'Mathematics?';
+      }); 
+      
+      for (var i = 0; i < imgs.length; i++) {
+        imgs[i].addEventListener('mouseout', function() {
+          imgDescription.innerHTML = '&nbsp;';
+        });
+      }
+    </script>
+  </body>
+</html>
