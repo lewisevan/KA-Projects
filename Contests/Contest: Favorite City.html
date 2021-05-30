@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!--
+    This contest has already ended! To view the winners, please visit this program: 
+    https://www.khanacademy.org/computer-programming/kacp-challenge-council/5745407636209664
+-->
+<!-- 
+    I've been programming X months, and I have learned YY% of Intro to Webpages. 
+    TODO: Fill that out ^
+    TODO: Remove CSS, HTML, and JavaScript starter code.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Contest: Favorite City</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Roboto', arial;
+                margin: 0;
+                background: rgb(116, 219, 216);
+                width: 100vw;
+                height: 100vh;
+                overflow-y: hidden;
+            }
+            header {
+                text-align: center;
+                opacity: 0;
+                color: white;
+                font-size: 50px;
+                -webkit-animation: 2s slidefade 3s forwards;
+                animation: 2s slidefade 3s forwards;
+            }
+            #deadline {
+                text-align: center;
+                color: white;
+                font-size: 25px;
+                opacity: 0;
+                -webkit-animation: 1s fadein 5s forwards;
+                animation: 1s fadein 5s forwards;
+            }
+            #buildings-container {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-pack: distribute;
+                justify-content: space-around;
+                position: absolute;
+                width: 100%;
+                bottom: 0px;
+                left: 0px;
+                right: 0px;
+                -webkit-animation: 1s fadein 0.5s forwards, 2s slide 3s forwards;
+                animation: 1s fadein 0.5s forwards, 2s slide 3s forwards;
+                opacity: 0;
+            }
+            @-webkit-keyframes fadein {
+                100% {
+                    opacity: 1;
+                }
+            }
+            @keyframes fadein {
+                100% {
+                    opacity: 1;
+                }
+            }
+            @-webkit-keyframes slide {
+                0% {
+                    opacity: 1;
+                }
+                100% {
+                    bottom: -140px;
+                    opacity: 0.8;
+                }
+            }
+            @keyframes slide {
+                0% {
+                    opacity: 1;
+                }
+                100% {
+                    bottom: -140px;
+                    opacity: 0.8;
+                }
+            }
+            @-webkit-keyframes slidefade {
+                100% {
+                    opacity: 1;
+                    margin-top: 60px;
+                }
+            }
+            @keyframes slidefade {
+                100% {
+                    opacity: 1;
+                    margin-top: 60px;
+                }
+            }
+            .building {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-align: center;
+                align-items: center;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                align-self: flex-end;
+                width: 16%;
+                height: 250px;
+                position: relative;
+            }
+            .side {
+                position: absolute;
+                top: 0px;
+                width: 50%;
+                bottom: 0px;
+                z-index: 1;
+            }
+            .side.right {
+                right: 1px;
+            }
+            .window {
+                width: 35%;
+                height: 12%;
+                background: rgba(77, 77, 77, 0.8);
+                border: 2px solid rgba(255, 255, 255, 0.15);
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                margin: 0px auto;
+                z-index: 2;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <header>Contest: Favorite City</header>
+        <p id="deadline">Deadline: May 25th, 2018</p>
+        <div id="buildings-container"></div>
+    </body>
+    
+    <script>
+        var buildingsBox = document.getElementById('buildings-container');
+        function createBuilding(Lback, Rback, id, height, windowNum) {
+            var buildingBox = document.createElement('div');
+            buildingBox.className = 'building';
+            buildingBox.id = id;
+            buildingBox.style.height = height;
+            
+            var Lside = document.createElement('div');
+            Lside.className = 'side left';
+            Lside.style.background = Lback;
+            
+            var Rside = document.createElement('div');
+            Rside.className = 'side right';
+            Rside.style.background = Rback;
+            
+            buildingBox.appendChild(Lside);
+            buildingBox.appendChild(Rside);
+            
+            for (var i = 0; i < windowNum; i++) {
+                var window = document.createElement('div');
+                window.className = 'window';
+                buildingBox.appendChild(window);
+            }
+            
+            buildingsBox.appendChild(buildingBox);
+        };
+
+        createBuilding('#ebc4c4', '#d99fa2', 'building-1', '260px', 8);
+        createBuilding('#eed4c6', '#c8aca4', 'building-2', '200px', 6);
+        createBuilding('#c2e9f6', '#92aebc', 'building-3', '260px', 8);
+        createBuilding('#e1e9ef', '#b8c5cc', 'building-4', '260px', 8);
+        createBuilding('#a6d7dd', '#5c9aa6', 'building-5', '300px', 10);
+    </script>
+</html>
