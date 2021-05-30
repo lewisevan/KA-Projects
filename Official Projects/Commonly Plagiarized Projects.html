@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Commonly Plagiarized Projects</title>
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    </head>
+    <style>
+        body {
+            font-family: 'Lato', serif;
+            overflow-x: hidden;
+            background-color: #f7f8fa;
+        }
+        
+        .content {
+            width: 95%;
+            margin: auto;
+        }
+        
+        h1 {
+            background-color: #1865F2;
+            color: white;
+            text-align: center;
+            margin: auto;
+            margin-bottom: 20px;
+            font-family: 'Lato', serif;
+            font-weight: bold;
+            padding: 6px 0px;
+            border-radius: 4px;
+        }
+        
+        #intro {
+            padding: 30px;
+            border-radius: 4px;
+            border: 1px solid lightgrey;
+            background-color: white;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        #accordion-container {
+            border: 1px solid lightgrey;
+            border-radius: 4px;
+        }
+        
+        img {
+            width: 200px;
+            border: 1px solid lightgrey;
+            float: left;
+            margin-right: 27px;
+        }
+        
+        .accordion {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: 0.25px solid lightgrey;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            font-family: 'Lato';
+            transition: 0.4s;
+        }
+
+        .active, .accordion:hover {
+            background-color: #eee;
+        }
+
+        .accordion:after {
+            content: '\002B';
+            color: black;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+        
+        .project-container {
+            display: block;
+            height: 200px;
+            border-bottom: 1px solid black;
+            padding-bottom: 20px;
+        }
+        
+        .project-info {
+            
+        }
+    </style>
+    <body>
+        <div class="content">
+            <h1>Commonly Plagiarized Projects</h1>
+            <div id="intro">
+            <p>Use this list to identify plagiarized work that has been submitted for a project evaluation, as well as any projects that are not saved as spin-offs of the original. If you come across a frequenlty copied original that is not on this list, let me know in the comments below so I can add it.</p>
+            <p><strong>Reporting plagiarized Programs: </strong>To report plagiarized programs, flag the program and include a link to the original in the flag description.</p>
+        </div>
+        
+            <!-- Accordion design from https://www.w3schools.com/howto/howto_js_accordion.asp -->
+            <div id="accordion-container">
+                <button class="accordion">What's for Dinner?</button>
+                <div class="panel" id="Dinner">
+                    
+                </div>
+
+                <button class="accordion">Fish Tank</button>
+                <div class="panel"  id="Fish Tank">
+                    
+                </div>
+
+                <button class="accordion">Ad Design</button>
+                <div class="panel" id="Ad Design">
+                    
+                </div>
+                
+                <button class="accordion">Magic 8-Ball</button>
+                <div class="panel" id="8 ball">
+                    
+                </div>
+                
+                <button class="accordion">Build a House</button>
+                <div class="panel" id="Build a House">
+                    
+                </div>
+                
+                <button class="accordion">Make it Rain</button>
+                <div class="panel" id="Make it Rain">
+                    
+                </div>
+                
+                <button class="accordion">Bookshelf</button>
+                <div class="panel" id="Bookshelf">
+                    
+                </div>
+                
+                <button class="accordion">Paint Splatter</button>
+                <div class="panel" id="Paint Splatter">
+                    
+                </div>
+                
+                <button class="accordion">Mountain Range</button>
+                <div class="panel" id="Mountain Range">
+                    
+                </div>
+                
+                <button class="accordion">Computational Creatures</button>
+                <div class="panel" id="Computational Creatures">
+                    
+                </div>
+                
+                <button class="accordion">Critter Jitters</button>
+                <div class="panel" id="Critter Jitters">
+                    
+                </div>
+                
+                <button class="accordion">Curling Creatures</button>
+                <div class="panel" id="Curling Creatures">
+                    
+                </div>
+                
+                <button class="accordion">Creature Colonies</button>
+                <div class="panel" id="Creature Colonies">
+                    
+                </div>
+                
+                <button class="accordion">Asteroids</button>
+                <div class="panel" id="Asteroids Spaceship">
+                    
+                </div>
+                
+                <button class="accordion">Recursive Art</button>
+                <div class="panel" id="Recursive Art">
+                    
+                </div>
+                
+                <button class="accordion">Miscellaneous</button>
+                <div class="panel" id="Misc">
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+    
+        //List of programs
+        var programs = [
+            {
+                title: 'Spin-off of "Project: What\'s for Dinner?"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-whats-for-dinner/5817854517805056',
+                author: 'Outside KA',
+                created: '03/04/2016',
+                category: 'Dinner'
+            },
+            {
+                title: 'Spin-off of "Project: What\'s for Dinner?"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-whats-for-dinner/5937267173621760',
+                author: 'elfastw',
+                created: '08/13/2015 10:38',
+                category: 'Dinner'
+            },
+            {
+                title: 'Spin-off of "Project: What\'s for Dinner?"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-whats-for-dinner/5458939246641152',
+                author: 'Outside KA',
+                created: '12/12/2017',
+                category: 'Dinner'
+            },
+            {
+                title: 'Spin-off de "Projet : qu\'avons-nous pour dîner ce soir ?"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-de-projet-quavons-nous-pour-dner-ce-soir/5943872414154752',
+                author: 'N. Millon',
+                created: '06/23/2016 14:59',
+                category: 'Dinner'
+            },
+            {
+                title: 'Broch\'s Dinner',
+                link: 'https://www.khanacademy.org/computer-programming/brochs-dinner/5777604500258816',
+                author: 'Jesus Osvaldo Broch',
+                created: '10/24/2014 16:25',
+                category: 'Dinner'
+            },
+            {
+                title: 'Spin-off of "Project: What\'s for Dinner?"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-whats-for-dinner/6009430518923264',
+                author: 'Lisa',
+                created: '06/16/2015 09:06',
+                category: 'Dinner'
+            },
+            {
+                title: 'Steak Dinner',
+                link: 'https://www.khanacademy.org/computer-programming/steak-dinner/6608044606750720',
+                author: 'FrimaireFroid',
+                created: '09/19/2015 15:37',
+                category: 'Dinner'
+            },
+            {
+                title: 'Spin-off of "Project: What\'s for Dinner?"- TACOS!!!',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-whats-for-dinner-tacos/4531352804261888',
+                author: 'John Minturn',
+                created: '12/13/2013 10:43',
+                category: 'Dinner'
+            },
+            {
+                title: 'Breakfast Pancakes!',
+                link: 'https://www.khanacademy.org/computer-programming/breakfast-pancakes/4320154941',
+                author: 'Jessica H',
+                created: '04/09/2016 21:02',
+                category: 'Dinner'
+            },
+            {
+                title: 'Spin-off of "Project: What\'s for Dinner?"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-whats-for-dinner/5651107204005888',
+                author: 'meera st4766',
+                created: '10/06/2019 04:14',
+                category: 'Dinner'
+            },
+            {
+                title: 'Spin-off of "Project: Fish Tank" Kaloyan',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-fish-tank-kaloyan/5439631355543552',
+                author: 'Kaloyan Yordanov',
+                created: '06/21/2014 05:47',
+                category: 'Fish Tank',
+            },
+            {
+                title: 'Spin-off of "Project: Fish Tank"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-fish-tank/4621614076264448',
+                author: 'SilverArrow',
+                created: '08/08/2016 08:59',
+                category: 'Fish Tank',
+            },
+            {
+                title: 'Fish Tank',
+                link: 'https://www.khanacademy.org/computer-programming/fish-tank/5027506463703040',
+                author: 'Troy Cook',
+                created: '02/28/2014 10:37',
+                category: 'Fish Tank',
+            },
+            {
+                title: 'Project: Fish Tank (Fish, Seaweed, Bubbles & Stones!)',
+                link: 'https://www.khanacademy.org/computer-programming/project-fish-tank/5534403573841920',
+                author: 'Island2D',
+                created: '03/21/2014 13:09',
+                category: 'Fish Tank',
+            },
+            {
+                title: 'Spin-off of "Project: Fish Tank"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-fish-tank/6630824970027008',
+                author: 'google',
+                created: '07/13/2014 17:12',
+                category: 'Fish Tank',
+            },
+            {
+                title: 'Spin-off of "Project: Fish Tank"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-fish-tank/5110177742192640',
+                author: 'MickeyMouse7777',
+                created: '03/18/2014 14:11',
+                category: 'Fish Tank',
+            },
+            {
+                title: 'Spin-off of "Project: Fish Tank"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-fish-tank/5488206378565632',
+                author: 'aya',
+                created: '02/08/2016 10:44',
+                category: 'Fish Tank'
+            },
+            {
+                title: 'Spin-off of "Project: Fish Tank"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-fish-tank/6169861018845184',
+                author: 'Isaac Vereau',
+                created: '10/29/2019 15:26',
+                category: 'Fish Tank'
+            },
+            {
+                title: 'Spin-off of "Project: Fish Tank"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-fish-tank/5113986228944896',
+                author: 'jwellington',
+                created: '03/25/2014 12:59',
+                category: 'Fish Tank'
+            },
+            {
+                title: 'Spin-off of "Project: Fish tank"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-fish-tank/4969406949834752',
+                author: 'Alyssa Dunn',
+                created: '09/14/2020 14:01',
+                category: 'Fish Tank'
+            },
+            {
+                title: 'Spin-off of "Project: Ad Design"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-ad-design/5491418853408768',
+                author: 'timmvt',
+                created: '07/05/2015 12:31',
+                category: 'Ad Design'
+            },
+            {
+                title: 'Spin-off of "Project: Ad Design"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-ad-design/6463153096622080',
+                author: 'Carson Nelson',
+                created: '12/09/2014 12:29',
+                category: 'Ad Design'
+            },
+            {
+                title: 'Spin-off of "Project: Ad Design"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-ad-design/5253605733695488',
+                author: 'Zhia',
+                created: '01/17/2015 14:10',
+                category: 'Ad Design'
+            },
+            {
+                title: 'Spin-off of "Project: Ad Design"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-ad-design/5783298489974784',
+                author: 'Leasa Bass',
+                created: '01/25/2014 21:29',
+                category: 'Ad Design'
+            },
+            {
+                title: 'Hogwarts Letter',
+                link: 'https://www.khanacademy.org/computer-programming/hogwarts-letter/4531541268758528',
+                author: 'Shania Williams',
+                created: '03/05/2015 06:52',
+                category: 'Ad Design'
+            },
+            {
+                title: 'Spin-off of "Project: Ad Design"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-ad-design/5893262715912192',
+                author: 'daniel_appenheimer',
+                created: '01/10/2014 12:03',
+                category: 'Ad Design'
+            },
+            {
+                title: 'Spin-off of "Project: Ad Design"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-ad-design/4982799419408384',
+                author: 'benjamin.beauchman',
+                created: '03/11/2019 15:43',
+                category: 'Ad Design'
+            },
+            {
+                title: 'Spin-off of "Project: Ad Design"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-ad-design/6388561884053504',
+                author: 'kitfish',
+                created: '04/19/2019 15:58',
+                category: 'Ad Design'
+            },
+            {
+                title: 'Spin-off of "Project: Ad design"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-ad-design/4558672050536448',
+                author: 'lockhtau',
+                created: '02/14/2020 14:01',
+                category: 'Ad Design'
+            },
+            {
+                title: 'Spin-off of "Project: Ad design"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-ad-design/4519708897198080',
+                author: 'weerhero',
+                created: '05/08/2020 13:11',
+                category: 'Ad Design'
+            },
+            {
+                title: 'Spin-off of "Project: Magic 8-Ball"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-magic-8-ball/5341012684832768',
+                author: 'elfastw',
+                created: '08/21/2015 09:02',
+                category: '8 ball'
+            },
+            {
+                title: 'Spin-off of "Project: Magic 8-Ball"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-magic-8-ball/4803027075334144',
+                author: 'christophergw07',
+                created: '02/10/2015 12:29',
+                category: '8 ball'
+            },
+            {
+                title: 'Spin-off of "Project: Magic 8-Ball"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-magic-8-ball/5479030782',
+                author: 'Any Onne',
+                created: '05/13/2016 17:34',
+                category: '8 ball'
+            },
+            {
+                title: 'Spin-off of "Project: Magic 8-Ball"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-magic-8-ball/6463568677175296',
+                author: 'Stephanie Warman',
+                created: '04/07/2015 11:32',
+                category: '8 ball'
+            },
+            {
+                title: 'Spin-off of "Project: Magic 8-Ball"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-magic-8-ball/5891959219585024',
+                author: 'Jorge Arturo López Meléndez',
+                created: '03/29/2018 12:57',
+                category: '8 ball'
+            },
+            {
+                title: 'Spin-off of "Project: Magic 8-Ball"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-magic-8-ball/5854986893950976',
+                author: 'Paramo,Patricia',
+                created: '12/12/2018 14:37',
+                category: '8 ball'
+            },
+            {
+                title: 'Spin-off of "Project: Build-a-House"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-build-a-house/4969221728763904',
+                author: 'Carson Nelson',
+                created: '01/02/2015 14:30',
+                category: 'Build a House'
+            },
+            {
+                title: 'Spin-off of "Project: Build-a-House"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-build-a-house/4851698454757376',
+                author: 'gavinbalderas14',
+                created: '12/26/2014 18:27',
+                category: 'Build a House'
+            },
+            {
+                title: 'Spin-off of "Project: Build-a-House"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-build-a-house/6129418268737536',
+                author: 'nmcavossa',
+                created: '01/08/2019 08:29',
+                category: 'Build a House'
+            },
+            {
+                title: 'Spin-off of "Project: Build-a-House"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-build-a-house/6382151230324736',
+                author: 'Essaddik Chaou',
+                created: '09/30/2018 06:02',
+                category: 'Build a House'
+            },
+            {
+                title: 'Spin-off of "Project: Build-a-House"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-build-a-house/3071568679',
+                author: 'bigmike73184',
+                created: '03/02/2016 18:47',
+                category: 'Build a House'
+            },
+            {
+                title: 'Spin-off of "Project: Build-a-House"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-build-a-house/6500380005367808',
+                author: 'Grace O',
+                created: '01/29/2014 18:35',
+                category: 'Build a House'
+            },
+            {
+                title: 'Spin-off of "Project: Build-a-House"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-build-a-house/5872175921528832',
+                author: 'Kara Gates',
+                created: '09/23/2018 16:53',
+                category: 'Build a House'
+            },
+            {
+                title: 'Spin-off of "Project: Build-a-House"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-build-a-house/5128191679135744',
+                author: 'calvinrwebster',
+                created: '02/25/2014 12:40',
+                category: 'Build a House'
+            },
+            {
+                title: 'Spin-off of "Project: Build-a-House"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-build-a-house/6312306112856064',
+                author: 'Raisa Zaitseva',
+                created: '07/25/2015 16:39',
+                category: 'Build a House'
+            },
+            {
+                title: 'Spin-off of "Project: Build-a-House"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-build-a-house/5402323767263232',
+                author: 'kreddy',
+                created: '02/26/2015 19:49',
+                category: 'Build a House'
+            },
+            {
+                title: 'Spin-off of "Project: Build-a-House"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-build-a-house/6531471345451008',
+                author: 'Miruna Dumitrascu',
+                created: '07/04/2014 14:49',
+                category: 'Build a House'
+            },
+            {
+                title: 'Spin-off of "Project: Build-a-House"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-build-a-house/5469378798944256',
+                author: 'arecchan2.0',
+                created: '12/04/2014 08:43',
+                category: 'Build a House'
+            },
+            {
+                title: 'Spin-off of "Project: Build-a-House"',
+                link: 'https://www.khanacademy.org/computer-programming/i/4140401572',
+                author: 'Matt Lindzon',
+                created: '04/05/2016 12:55',
+                category: 'Build a House'
+            },
+            {
+                title: 'Final House (Day/Night)',
+                link: 'https://www.khanacademy.org/computer-programming/final-house-daynight/1969442996',
+                author: 'riley.converse',
+                created: '09/05/2013 06:32',
+                category: 'Build a House'
+            },
+            {
+                title: 'Spin-off of "Project: Make it Rain"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-make-it-rain/4804945159651328',
+                author: 'Jayson (Aftonone)',
+                created: '07/02/2014 21:03',
+                category: 'Make it Rain'
+            },
+            {
+                title: 'Rain',
+                link: 'https://www.khanacademy.org/computer-programming/i/1166755869',
+                author: 'Element118',
+                created: '11/23/2012 03:58',
+                category: 'Make it Rain'
+            },
+            {
+                title: 'Spin-off of "Project: Bookshelf" Work in progress',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-bookshelf-work-in-progress/4563177389948928',
+                author: 'Braulio Ramirez',
+                created: '02/26/2014 10:32',
+                category: 'Bookshelf'
+            },
+            {
+                title: 'Spin-off of "Project: Bookshelf"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-bookshelf/6220533103329280',
+                author: 'Grace O',
+                created: '05/14/2014 17:54',
+                category: 'Bookshelf'
+            },
+            {
+                title: 'Spin-off of "Project: Bookshelf"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-bookshelf/6705474435022848',
+                author: 'Inger Hohler',
+                created: '01/15/2014 16:51',
+                category: 'Bookshelf'
+            },
+            {
+                title: 'Khan Academy Bookshelf Project (YouTube)',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-bookshelf/3161539400',
+                author: 'Amy Prosser',
+                created: '03/13/2015',
+                category: 'Bookshelf'
+            },
+            {
+                title: 'Spin-off of "Project: Bookshelf"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-bookshelf/4549893259657216',
+                author: 'Oliver Isenrich',
+                created: '04/22/2015 14:03',
+                category: 'Bookshelf'
+            },
+            {
+                title: 'Spin-off of "Project: Bookshelf"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-bookshelf/5793466501169152',
+                author: 'Chezaree Booker',
+                created: '08/10/2015 23:03',
+                category: 'Bookshelf'
+            },
+            {
+                title: 'Spin-off of "Project: Bookshelf"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-bookshelf/5087010000109568',
+                author: 'b.perezcervantes',
+                created: '2017',
+                category: 'Bookshelf'
+            },
+            {
+                title: 'Spin-off of "Project: Paint splatter"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-paint-splatter/5450493028204544',
+                author: 'Barry',
+                created: '01/27/2015 13:42',
+                category: 'Paint Splatter'
+            },
+            {
+                title: 'Spin-off of "Project: Paint splatter"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-paint-splatter/4955886556610560',
+                author: 'knclt',
+                created: '10/24/2016 23:45',
+                category: 'Paint Splatter'
+            },
+            {
+                title: 'Spin-off of "Project: Mountain range"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-mountain-range/4529127380',
+                author: 'Den Karen',
+                created: '04/14/2016 15:07',
+                category: 'Mountain Range'
+            },
+            {
+                title: 'Spin-off of "Project: Mountain range"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-mountain-range/4627535193899008',
+                author: 'scaul1',
+                created: '10/18/2017 15:57',
+                category: 'Mountain Range'
+            },
+            {
+                title: 'Spin-off of "Project: Computational creatures"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-computational-creatures/4752935696924672',
+                author: 'scaul1',
+                created: '10/31/2017 21:03',
+                category: 'Computational Creatures'
+            },
+            {
+                title: 'Spin-off of "Project: Computational creatures"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-computational-creatures/5768361069379584',
+                author: 'Raymond Muller',
+                created: '12/21/2015 18:19',
+                category: 'Computational Creatures'
+            },
+            {
+                title: 'Spin-off of "Project: Computational creatures"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-computational-creatures/4777604092',
+                author: 'Thordoor',
+                created: '04/22/2016 09:20',
+                category: 'Computational Creatures'
+            },
+            {
+                title: 'Spin-off of "Project: Creature comforts and critter jitters"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-creature-comforts-and-critter-jitters/6588437159673856',
+                author: 'scaul1',
+                created: '11/09/2017 09:55',
+                category: 'Critter Jitters'
+            },
+            {
+                title: 'Spin-off of "Project: Creature comforts and critter jitters"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-creature-comforts-and-critter-jitters/3781609910',
+                author: 'Elijah',
+                created: '03/25/2016 17:23',
+                category: 'Critter Jitters'
+            },
+            {
+                title: 'Spin-off of "Project: Creature comforts and critter jitters"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-creature-comforts-and-critter-jitters/4972865847296000',
+                author: 'Chris',
+                created: '07/30/2014 10:17',
+                category: 'Critter Jitters'
+            },
+            {
+                title: 'Spin-off of "Project: Curling, crawling, circling creatures"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-curling-crawling-circling-creatures/5198452883062784',
+                author: 'Raymond Muller',
+                created: '12/28/2015 18:07',
+                category: 'Curling Creatures'
+            },
+            {
+                title: 'Spin-off of "Project: Curling, crawling, circling creatures"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-curling-crawling-circling-creatures/4519526775455744',
+                author: 'Ohriyanto Hu',
+                created: '10/08/2016 05:45',
+                category: 'Curling Creatures'
+            },
+            {
+                title: 'Spin-off of "Project: Curling, crawling, circling creatures"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-curling-crawling-circling-creatures/4543693211500544',
+                author: 'scaul1',
+                created: '12/11/2017 09:43',
+                category: 'Curling Creatures'
+            },
+            {
+                title: 'Spin-off of "Project: Creature Colonies"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-creature-colonies/5792814018789376',
+                author: 'scaul1',
+                created: '12/11/2017 10:35',
+                category: 'Creature Colonies'
+            },
+            {
+                title: 'Spin-off of "Project: Creature Colonies"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-creature-colonies/5655555822452736',
+                author: 'Den Karen',
+                created: '08/14/2016 10:46',
+                category: 'Creature Colonies'
+            },
+            {
+                title: 'Spin-off of "Project: Creature Colonies"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-creature-colonies/5023145677029376',
+                author: 'caitlin_jandl17',
+                created: '03/26/2015 08:48',
+                category: 'Creature Colonies'
+            },
+            {
+                title: 'Cell Battle!',
+                link: 'https://www.khanacademy.org/computer-programming/cell-battle/5541220724244480',
+                author: 'JAKO565',
+                created: '10/08/2014 11:42',
+                category: 'Creature Colonies'
+            },
+            {
+                title: 'Spin-off of "Project: Creature Colonies"',
+                link: 'https://www.khanacademy.org/computer-programming/i/6364951496753152',
+                author: 'Raymond Muller',
+                created: '01/03/2016 21:39',
+                category: 'Creature Colonies'
+            },
+            {
+                title: 'Spin-off of "Project: Asteroids spaceship"',
+                link: 'https://www.khanacademy.org/computer-programming/spin-off-of-project-asteroids-spaceship/5953237100658688',
+                author: 'purcia h',
+                created: '02/05/2016 19:56',
+                category: 'Asteroids Spaceship'
+            },
+            {
+                title: 'Spin-off of "Project: Recursive art"',
+                link: 'https://www.khanacademy.org/computer-science/spin-off-of-project-recursive-art/5179911469727744',
+                author: 'SHAJI.LEON',
+                created: '01/30/2018 17:59 ',
+                category: 'Recursive Art'
+            },
+            {
+                title: 'Color Switch',
+                link: 'https://www.khanacademy.org/computer-programming/color-switch-update-coming-this-fall/5087901466',
+                author: 'тнe 1# planeт proponenт',
+                created: '05/02/2016 16:02',
+                category: 'Misc'
+            },
+            {
+                title: 'Minecraft',
+                link: 'https://www.khanacademy.org/computer-programming/minecraft/1523326697',
+                author: 'Bennimus',
+                created: '04/06/2013 07:35',
+                category: 'Misc'
+            },
+            {
+                title: 'Nyan Cat',
+                link: 'https://www.khanacademy.org/computer-programming/nyan-cat/975591894',
+                author: 'Jessica Liu',
+                created: '11/12/2012 13:09',
+                category: 'Misc'
+            },
+            {
+                title: 'Geometry Dash',
+                link: 'https://www.khanacademy.org/computer-programming/geometry-dash/5690384665149440',
+                author: 'Pranav Patil (pranavpatil.tk)',
+                created: '11/22/2015 20:19',
+                category: 'Misc'
+            },
+            {
+                title: 'SAVE GOTHAM !!',
+                link: 'https://www.khanacademy.org/computer-programming/save-gotham/6416169559654400',
+                author: 'KimKiim',
+                created: '02/18/2015 06:49',
+                category: 'Misc'
+            }];
+            
+            function populatePages() {
+                for (var i = 0; i < programs.length; i++) {
+                    var panel = document.getElementById(programs[i].category);
+                    
+                    var s = "";
+                    s += "<div class='project-container'>";
+                    s += "<img src='" + programs[i].link + "/latest.png'>";
+                    s += "<div class='project-info'>"
+                    s += "<p><strong>Title: </strong><a href='" + programs[i].link + "' target='_blank'>" + programs[i].title + "</a></p>";
+                    s += "<p><strong>Author: </strong>" + programs[i].author + "</p>";
+                    s += "<p><strong>Created: </strong>" + programs[i].created + "</p>";
+                    s += "</div></div>";
+                    panel.innerHTML += s;
+                }
+            }
+            
+            populatePages();
+    </script>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+        });
+        }
+</script>
+</html>
