@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<!--
+    I've been programming X months, and I have learned YY% of Intro to Webpages.
+    I would prefer to be placed in the (Beginner, Intermediate, or Advanced) bracket.
+    
+    TODO: Fill that out ^
+    
+    TODO: Remove starter code below.
+-->
+
+<html> 
+<!-- Using Pamela's Processing.JS Template: https://www.khanacademy.org/computer-programming/processingjs-inside-webpages-template/5157014494511104 -->
+
+  <head>
+    <title>Contest: Music - Webpage Submissions</title> 
+    <style>
+        body {
+            background-color: #ffeac7;
+            overflow: hidden;
+        }
+    </style>
+  </head>
+  <body>
+    <canvas id="drawMusic"></canvas> 
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+  <script>
+  var drawAnnouncement = function(processingInstance) {
+    with (processingInstance) {
+        size(580, 379); 
+        frameRate(30);
+        
+        background(255, 234, 199);
+        
+        strokeWeight(1.25);
+    
+        //stanza one
+        for(var o = 0; o < 5; o++) { 
+            var stanzaOne = 33 + (o * 12);
+            line(-3, stanzaOne, 602, stanzaOne - 28);
+        }
+    
+        //stanza two
+        for(var w = 0; w < 5; w++) { 
+            var stanzaTwo = 99 + (w * 12);
+            line(-3, stanzaTwo, 602, stanzaTwo + 50);
+        }
+        
+        //stanza three
+        for(var t = 0; t < 5; t++) { 
+            var stanzaThree = 164 + (t * 12);
+            line(-3, stanzaThree + 85, 602, stanzaThree + 55);
+        }
+        
+        //stanza four
+        for(var f = 0; f < 5; f++) { 
+            var stanzaFour = 164 + (f * 12);
+            line(-3, stanzaFour + 148, 602, stanzaFour + 209);
+        }
+    
+        fill(0, 0, 0);
+        
+        var quarterNote = '\u2669';
+        var eighthNote = '\u266A';
+        var sixteenthNote = '\u266C';
+        
+        //quarter notes first stanza
+        textSize(30);
+        text(quarterNote, 16, 33);
+        text(quarterNote, 112, 59);
+        text(quarterNote, 229, 35);
+        text(quarterNote, 361, 65);
+        text(quarterNote, 519, 29);
+        
+        //eighth notes first stanza
+        textSize(45);
+        text(eighthNote, 62, 85);
+        text(eighthNote, 174, 34);
+        text(eighthNote, 299, 54);
+        text(eighthNote, 439, 29);
+        text(eighthNote, 578, 52);
+        
+        //sixteenth notes first stanza
+        textSize(30);
+        text(sixteenthNote, 81, 36);
+        text(sixteenthNote, 192, 60);
+        text(sixteenthNote, 360, 29);
+        text(sixteenthNote, 482, 58);
+        
+        
+        //all notes on second stanza
+        textSize(30);
+        text(quarterNote, 4, 139);
+        text(quarterNote, 79, 114);
+        text(sixteenthNote, 45, 128);
+        
+        text(quarterNote, 500, 150);
+        text(quarterNote, 574, 184);
+        text(sixteenthNote, 537, 168);
+        
+        
+        //quarter notes third stanza
+        textSize(30);
+        text(quarterNote, 2, 261);
+        text(quarterNote, 127, 286);
+        text(quarterNote, 270, 261);
+        text(quarterNote, 435, 264);
+        text(quarterNote, 551, 235);
+        
+        //eighth notes third stanza
+        textSize(45);
+        text(eighthNote, 50, 301);
+        text(eighthNote, 176, 261);
+        text(eighthNote, 354, 284);
+        text(eighthNote, 508, 228);
+        
+        //sixteenth notes third stanza
+        textSize(30);
+        text(sixteenthNote, 75, 268);
+        text(sixteenthNote, 217, 287);
+        text(sixteenthNote, 394, 246);
+        text(sixteenthNote, 501, 263);
+        
+        
+        //quarter notes fourth stanza
+        textSize(30);
+        text(quarterNote, 38, 331);
+        text(quarterNote, 175, 356);
+        text(quarterNote, 294, 363);
+        text(quarterNote, 422, 373);
+        text(quarterNote, 556, 373);
+        text(quarterNote, 376, 350);
+        
+        //eighth notes fourth stanza
+        textSize(45);
+        text(eighthNote, 6, 366);
+        text(eighthNote, 84, 358);
+        text(eighthNote, 265, 344);
+        text(eighthNote, 452, 363);
+        
+        //sixteenth notes fourth stanza
+        textSize(30);
+        text(sixteenthNote, 131, 337);
+        text(sixteenthNote, 231, 359);
+        
+        
+        rectMode(CENTER);
+        
+        //text
+        noStroke();
+        fill(255, 234, 199);
+        rect(300, 150, 390, 100);
+        
+        fill(0, 0, 0);
+        textAlign(CENTER, CENTER);
+        textFont(createFont("fantasy"), 60);
+        
+        
+        fill(31, 31, 31);
+        text("Contest: Music", 295, 123);
+        textSize(30);
+        text("Deadline: June 21, 2020", 293, 196);
+        
+        textFont(createFont("fantasy Italic"), 20);
+        text("Webpage submissions", 293, 165);
+    }};
+
+  var canvas = document.getElementById("drawMusic"); 
+  var processingInstance = new Processing(canvas, drawAnnouncement);
+  </script>
+</html>
